@@ -190,22 +190,24 @@
       "¿Qué harías si te dijera que tengo una sorpresa especialmente para ti esta noche?"
     ]
   };
+
+  function showQuestion() {
+    const level = document.getElementById("level").value;
+    const box = document.getElementById("questionBox");
+    const opciones = preguntas[level];
+    const randomIndex = Math.floor(Math.random() * opciones.length);
+    const pregunta = opciones[randomIndex];
+
+    box.classList.remove("fade-in");
+    void box.offsetWidth; // reiniciar animación
+    box.classList.add("fade-in");
+
+    box.textContent = pregunta;
+  }
 </script>
 
-    function showQuestion() {
-      const level = document.getElementById("level").value;
-      const box = document.getElementById("questionBox");
-      const opciones = preguntas[level];
-      const randomIndex = Math.floor(Math.random() * opciones.length);
-      const pregunta = opciones[randomIndex];
-
-      box.classList.remove("fade-in");
-      void box.offsetWidth; // reiniciar animación
-      box.classList.add("fade-in");
-
-      box.textContent = pregunta;
-    }
-  </script>
 </body>
+</html>
+
 </html>
 

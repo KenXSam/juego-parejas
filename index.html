@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego para Parejas: Del Susurro al Fuego</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+      color: #fff;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #ff4d6d;
+    }
+    button {
+      background: #ff4d6d;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 12px;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ff1f4b;
+    }
+    .question-box {
+      background: #2e2e2e;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 30px;
+      min-height: 120px;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px #ff4d6d88;
+      transition: transform 0.5s;
+    }
+    select {
+      background: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 10px;
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 Juego para Parejas: Del Susurro al Fuego 🔥</h1>
+
+  <label for="level">🎯 Elige el nivel de intensidad:</label><br>
+  <select id="level">
+    <option value="conexion">🧠 Conexión</option>
+    <option value="diversion">😄 Diversión</option>
+    <option value="hot">🔥 Hot (suave)</option>
+    <option value="hot2">🔥🔥 Hot (atrevido)</option>
+    <option value="hot3">🚨🔥🔥🔥 Extremo</option>
+  </select>
+
+  <div class="question-box fade-in" id="questionBox">
+    👉 Haz clic en "Siguiente Pregunta" para comenzar...
+  </div>
+
+  <button onclick="showQuestion()">🎲 Siguiente Pregunta</button>
+
+  <script>
+    const preguntas = {
+      conexion: [
+        "¿Qué parte de tu infancia aún te influye hoy?",
+        "¿Qué canción describe mejor nuestra relación?",
+        "¿Cuál es tu recuerdo favorito conmigo?",
+        "¿Qué miedo aún no me has contado del todo?",
+        "¿Qué pequeño detalle mío te hace sonreír siempre?",
+        "¿Cómo te imaginabas el amor antes de conocerme?"
+      ],
+      diversion: [
+        "¿Qué harías si te despiertas en mi cuerpo por un día?",
+        "Haz una imitación mía (sin pasarte 😅)",
+        "¿Qué nombre ridículo me pondrías como superhéroe?",
+        "¿Qué harías si quedáramos atrapados en una isla desnudos?",
+        "Haz una cara sexy durante 10 segundos sin reírte",
+        "¿Qué serie deberíamos ver juntos con vino y mantita?"
+      ],
+      hot: [
+        "¿Cuál es tu parte favorita de mi cuerpo y por qué?",
+        "¿Qué te excita más en la cama?",
+        "¿Prefieres ritmo lento o intenso?",
+        "¿Qué tipo de ropa interior te gustaría que use más seguido?",
+        "¿Dónde te gustaría que te besara más seguido?",
+        "¿Cuál ha sido el momento más caliente entre nosotros hasta ahora?"
+      ],
+      hot2: [
+        "¿Te gustaría grabarnos teniendo sexo alguna vez?",
+        "Describe una fantasía sexual tuya en detalle",
+        "¿Qué juguete sexual te da curiosidad probar conmigo?",
+        "¿Dónde te gustaría hacerlo que aún no hemos probado?",
+        "¿Has fingido un orgasmo alguna vez conmigo?",
+        "¿Qué parte de tu cuerpo quieres que explore más?"
+      ],
+      hot3: [
+        "Haz una confesión sexual que nunca me hayas dicho",
+        "¿Probarías un trío? ¿Bajo qué condiciones?",
+        "¿Te atreverías a hacerlo en un lugar público? ¿Cuál?",
+        "¿Qué fantasía tienes que aún te da pena contarme?",
+        "¿Te gustaría dominarme o que te domine?",
+        "Imagina que tenemos 1 hora y un hotel… ¿Qué pasa?"
+      ]
+    };
+
+    function showQuestion() {
+      const level = document.getElementById("level").value;
+      const box = document.getElementById("questionBox");
+      const opciones = preguntas[level];
+      const randomIndex = Math.floor(Math.random() * opciones.length);
+      const pregunta = opciones[randomIndex];
+
+      box.classList.remove("fade-in");
+      void box.offsetWidth; // reiniciar animación
+      box.classList.add("fade-in");
+
+      box.textContent = pregunta;
+    }
+  </script>
+</body>
+</html>
+

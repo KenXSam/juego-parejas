@@ -13,6 +13,7 @@
       max-width: 700px;
       margin: auto;
       text-align: center;
+      min-height: 100vh;
     }
     h1, h2 {
       color: #ff4d6d;
@@ -41,7 +42,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 10px #ff4d6d88;
+      box-shadow: 0 0 10px rgba(255, 77, 109, 0.53);
       transition: transform 0.5s;
     }
     select {
@@ -51,6 +52,7 @@
       border-radius: 10px;
       border: none;
       margin-top: 10px;
+      font-size: 1em;
     }
     .fade-in {
       animation: fadeIn 0.5s ease-in-out;
@@ -59,30 +61,41 @@
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
     }
+    .footer {
+      margin-top: 30px;
+      font-size: 0.8em;
+      opacity: 0.7;
+    }
   </style>
 </head>
 <body>
   <h1>🔥 Juego para Parejas: Del Susurro al Fuego 🔥</h1>
 
-  <label for="level">🎯 Elige el nivel de intensidad:</label><br>
-  <select id="level">
-    <option value="conexion">🧠 Conexión</option>
-    <option value="diversion">😄 Diversión</option>
-    <option value="hot">🔥 Hot (suave)</option>
-    <option value="hot2">🔥🔥 Hot (atrevido)</option>
-    <option value="hot3">🚨🔥🔥🔥 Extremo</option>
-    <option value="relacion">💖 Relacion</option>
-    <option value="intimidad">🚨 Intimidad</option>
-    <option value="situaciones_intimas">🚨🚨 Situaciones Intimas</option>
-    <option value="fantasias_sexuales">💦😈 Fantasias Sexuales</option>
-    <option value="sorpresa">😉 Sorpresa</option>
-  </select>
+  <div>
+    <label for="level">🎯 Elige el nivel de intensidad:</label><br>
+    <select id="level">
+      <option value="conexion">🧠 Conexión</option>
+      <option value="diversion">😄 Diversión</option>
+      <option value="hot">🔥 Hot (suave)</option>
+      <option value="hot2">🔥🔥 Hot (atrevido)</option>
+      <option value="hot3">🚨🔥🔥🔥 Extremo</option>
+      <option value="relacion">💖 Relación</option>
+      <option value="intimidad">🚨 Intimidad</option>
+      <option value="situaciones_intimas">🚨🚨 Situaciones Íntimas</option>
+      <option value="fantasias_sexuales">💦😈 Fantasías Sexuales</option>
+      <option value="sorpresa">😉 Sorpresa</option>
+    </select>
+  </div>
 
   <div class="question-box fade-in" id="questionBox">
     👉 Haz clic en "Siguiente Pregunta" para comenzar...
   </div>
 
   <button onclick="showQuestion()">🎲 Siguiente Pregunta</button>
+
+  <div class="footer">
+    © 2025 - Juego para Parejas
+  </div>
 
  <script>
   const preguntas = {
@@ -101,10 +114,10 @@
       "¿Qué harías si te despiertas en mi cuerpo por un día?",
       "Haz una imitación mía (sin pasarte 😅)",
       "¿Qué nombre ridículo me pondrías como superhéroe?",
-      "¿Qué harías si quedáramos atrapados en una isla desnudos?",
+      "¿Qué harías si quedáramos atrapados en una isla desierta?",
       "Haz una cara sexy durante 10 segundos sin reírte",
       "¿Qué serie deberíamos ver juntos con vino y mantita?",
-      "Si estuviéramos atrapados sin ropa, ¿cómo crees que reaccionaríamos?",
+      "Si pudiéramos intercambiar cuerpos por un día, ¿qué sería lo primero que harías?",
       "¿Qué harías si yo te propusiera jugar un juego atrevido de preguntas?"
     ],
     hot: [
@@ -127,7 +140,7 @@
       "¿Qué parte de tu cuerpo quieres que explore más?",
       "¿Te gustaría que te amara en un lugar diferente, como en la ducha o el coche?",
       "¿Qué harías si estuviéramos en un lugar público y no pudiera dejar de tocarte?",
-      "Si me pidiera que no hables durante un momento, pero me tocaras en ciertas partes, ¿dónde empezarías?"
+      "Si te pidiera que no hables durante un momento, pero me tocaras en ciertas partes, ¿dónde empezarías?"
     ],
     hot3: [
       "Haz una confesión sexual que nunca me hayas dicho",
@@ -141,7 +154,7 @@
     ],
     relacion: [
       "¿Cómo te sentiste cuando te dije 'te amo' por primera vez?",
-      "¿Cuál fue el primer momento en el que supe que estábamos hechos el uno para el otro?",
+      "¿Cuál fue el primer momento en que supiste que estábamos hechos el uno para el otro?",
       "¿Qué es lo que más te hace sentir querido/a por mí?",
       "¿Cuál es tu recuerdo favorito de una cita que tuvimos?",
       "¿Hay alguna cosa que todavía te gustaría probar juntos que nunca hemos hecho?",
@@ -163,7 +176,7 @@
     ],
     situaciones_intimas: [
       "¿Te gustaría tener relaciones en algún lugar fuera de la cama? ¿Dónde te gustaría que fuera?",
-      "¿Qué harías si estuvieras completamente desnudo/a conmigo en un lugar público?",
+      "¿Qué harías si estuvieras completamente desnudo/a conmigo en un lugar privado pero inusual?",
       "¿Alguna vez has fantaseado conmigo en un lugar extraño? Cuéntame cómo sería.",
       "¿Te gustaría que probáramos a hacerlo en una posición que nunca hemos intentado? ¿Cuál?",
       "¿Dónde te gustaría que te acariciara cuando no estamos en la cama?",
@@ -172,23 +185,23 @@
       "¿Te gustaría que probáramos hacerlo en una postura más atrevida, por ejemplo, contra una pared o en el suelo?"
     ],
     fantasias_sexuales: [
-      "¿Tienes alguna fantasía de sumisión o dominación que te gustaría probar conmigo? ¿Qué tal si lo hacemos hoy?",
+      "¿Tienes alguna fantasía de sumisión o dominación que te gustaría probar conmigo? ¿Qué tal si lo hacemos pronto?",
       "Si pudieras elegir un lugar fuera de la habitación para tener relaciones, ¿dónde sería y por qué?",
       "¿Te gustaría que hiciéramos un juego de rol? ¿Qué personajes te gustaría que interpretáramos?",
       "¿Te gustaría probar algo más 'extremo' en la cama, como ataduras o algo por el estilo?",
       "Si te propusiera grabar nuestro encuentro, ¿estarías de acuerdo? ¿Qué límites tendríamos?",
       "¿Te excita más la idea de ser dominante o sumiso/a? ¿Por qué?",
       "Si pudieras elegir entre una noche completamente sin reglas o una completamente planeada, ¿cuál elegirías?",
-      "Si estuviéramos en una fiesta privada, ¿te atreverías a hacer algo atrevido delante de otras personas?",
+      "¿Te atreverías a hacer algo atrevido en un lugar semiprivado?",
       "¿Te gustaría que probáramos el sexo en algún lugar fuera de la cama, como en la ducha o en una silla?"
     ],
     sorpresa: [
-      "Si me pido un masaje, ¿te gustaría darme uno mientras me tocas en zonas que no esperan?",
+      "Si te pido un masaje, ¿te gustaría dármelo mientras me tocas en zonas que no espero?",
       "¿Cómo reaccionarías si de repente, estando en cualquier parte de la casa, te tomara en mis brazos y te besara apasionadamente?",
-      "Si un día me encontrara vestida de manera completamente diferente a lo que sueles ver, ¿cómo reaccionarías?",
+      "Si un día me encontraras vestido/a de manera completamente diferente a lo que sueles ver, ¿cómo reaccionarías?",
       "¿Te gustaría sorprenderme con algo excitante en medio de la noche, sin previo aviso?",
-      "Si estuvieras completamente desnudo/a y me acercara a ti de una manera diferente, ¿cómo me recibirías?",
-      "¿Te gustaría que probáramos a tener relaciones en un sitio no tan común (como en un coche o en una tienda)?",
+      "Si estuvieras relajado/a y me acercara a ti de una manera diferente, ¿cómo me recibirías?",
+      "¿Te gustaría que probáramos a tener relaciones en un sitio no tan común (como en un coche o en la playa)?",
       "¿Cómo reaccionarías si te sorprendiera con un atuendo sexy que nunca esperaste?",
       "Si de repente te dijera que quiero que hagamos algo 'prohibido', ¿cuál sería tu reacción?",
       "¿Te gustaría que te sorprendiera con algo inesperado mientras te beso en el cuello o en los labios?",
@@ -196,21 +209,40 @@
     ]
   };
 
+  // Función para mostrar las preguntas
   function showQuestion() {
     const level = document.getElementById("level").value;
     const box = document.getElementById("questionBox");
+    
+    // Verificar que el nivel existe en nuestro objeto
+    if (!preguntas[level] || preguntas[level].length === 0) {
+      box.textContent = "¡Ups! No hay preguntas para este nivel. Intenta con otro.";
+      return;
+    }
+    
     const opciones = preguntas[level];
     const randomIndex = Math.floor(Math.random() * opciones.length);
     const pregunta = opciones[randomIndex];
 
+    // Reiniciar la animación
     box.classList.remove("fade-in");
-    void box.offsetWidth; // reiniciar animación
+    void box.offsetWidth; // Forzar el reflow
     box.classList.add("fade-in");
 
     box.textContent = pregunta;
   }
+  
+  // Inicializar la selección al cargar la página
+  document.addEventListener('DOMContentLoaded', function() {
+    const select = document.getElementById("level");
+    if (select) {
+      // Seleccionar una opción aleatoria al inicio
+      const options = select.options;
+      const randomOption = Math.floor(Math.random() * options.length);
+      select.selectedIndex = randomOption;
+    }
+  });
 </script>
 
 </body>
 </html>
-

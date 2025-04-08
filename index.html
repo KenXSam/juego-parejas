@@ -79,49 +79,118 @@
 
   <button onclick="showQuestion()">🎲 Siguiente Pregunta</button>
 
-  <script>
-    const preguntas = {
-      conexion: [
-        "¿Qué parte de tu infancia aún te influye hoy?",
-        "¿Qué canción describe mejor nuestra relación?",
-        "¿Cuál es tu recuerdo favorito conmigo?",
-        "¿Qué miedo aún no me has contado del todo?",
-        "¿Qué pequeño detalle mío te hace sonreír siempre?",
-        "¿Cómo te imaginabas el amor antes de conocerme?"
-      ],
-      diversion: [
-        "¿Qué harías si te despiertas en mi cuerpo por un día?",
-        "Haz una imitación mía (sin pasarte 😅)",
-        "¿Qué nombre ridículo me pondrías como superhéroe?",
-        "¿Qué harías si quedáramos atrapados en una isla desnudos?",
-        "Haz una cara sexy durante 10 segundos sin reírte",
-        "¿Qué serie deberíamos ver juntos con vino y mantita?"
-      ],
-      hot: [
-        "¿Cuál es tu parte favorita de mi cuerpo y por qué?",
-        "¿Qué te excita más en la cama?",
-        "¿Prefieres ritmo lento o intenso?",
-        "¿Qué tipo de ropa interior te gustaría que use más seguido?",
-        "¿Dónde te gustaría que te besara más seguido?",
-        "¿Cuál ha sido el momento más caliente entre nosotros hasta ahora?"
-      ],
-      hot2: [
-        "¿Te gustaría grabarnos teniendo sexo alguna vez?",
-        "Describe una fantasía sexual tuya en detalle",
-        "¿Qué juguete sexual te da curiosidad probar conmigo?",
-        "¿Dónde te gustaría hacerlo que aún no hemos probado?",
-        "¿Has fingido un orgasmo alguna vez conmigo?",
-        "¿Qué parte de tu cuerpo quieres que explore más?"
-      ],
-      hot3: [
-        "Haz una confesión sexual que nunca me hayas dicho",
-        "¿Probarías un trío? ¿Bajo qué condiciones?",
-        "¿Te atreverías a hacerlo en un lugar público? ¿Cuál?",
-        "¿Qué fantasía tienes que aún te da pena contarme?",
-        "¿Te gustaría dominarme o que te domine?",
-        "Imagina que tenemos 1 hora y un hotel… ¿Qué pasa?"
-      ]
-    };
+ <script>
+  const preguntas = {
+    conexion: [
+      "¿Qué parte de tu infancia aún te influye hoy?",
+      "¿Qué canción describe mejor nuestra relación?",
+      "¿Cuál es tu recuerdo favorito conmigo?",
+      "¿Qué miedo aún no me has contado del todo?",
+      "¿Qué pequeño detalle mío te hace sonreír siempre?",
+      "¿Cómo te imaginabas el amor antes de conocerme?",
+      "¿Qué piensas cuando me miras a los ojos? ¿Qué ves?",
+      "¿Cómo me describirías a tus amigos?",
+      "¿Qué es lo más importante que has aprendido de nuestra relación?"
+    ],
+    diversion: [
+      "¿Qué harías si te despiertas en mi cuerpo por un día?",
+      "Haz una imitación mía (sin pasarte 😅)",
+      "¿Qué nombre ridículo me pondrías como superhéroe?",
+      "¿Qué harías si quedáramos atrapados en una isla desnudos?",
+      "Haz una cara sexy durante 10 segundos sin reírte",
+      "¿Qué serie deberíamos ver juntos con vino y mantita?",
+      "Si estuviéramos atrapados sin ropa, ¿cómo crees que reaccionaríamos?",
+      "¿Qué harías si yo te propusiera jugar un juego atrevido de preguntas?"
+    ],
+    hot: [
+      "¿Cuál es tu parte favorita de mi cuerpo y por qué?",
+      "¿Qué te excita más en la cama?",
+      "¿Prefieres ritmo lento o intenso?",
+      "¿Qué tipo de ropa interior te gustaría que use más seguido?",
+      "¿Dónde te gustaría que te besara más seguido?",
+      "¿Cuál ha sido el momento más caliente entre nosotros hasta ahora?",
+      "Si me quito una prenda, ¿te gustaría que lo hiciera lentamente o rápido?",
+      "¿Dónde te gustaría que te tocara que aún no lo he hecho?",
+      "¿Qué harías si te sorprendiera con algo atrevido en medio de la noche?"
+    ],
+    hot2: [
+      "¿Te gustaría grabarnos teniendo sexo alguna vez?",
+      "Describe una fantasía sexual tuya en detalle",
+      "¿Qué juguete sexual te da curiosidad probar conmigo?",
+      "¿Dónde te gustaría hacerlo que aún no hemos probado?",
+      "¿Has fingido un orgasmo alguna vez conmigo?",
+      "¿Qué parte de tu cuerpo quieres que explore más?",
+      "¿Te gustaría que te amara en un lugar diferente, como en la ducha o el coche?",
+      "¿Qué harías si estuviéramos en un lugar público y no pudiera dejar de tocarte?",
+      "Si me pidiera que no hables durante un momento, pero me tocaras en ciertas partes, ¿dónde empezarías?"
+    ],
+    hot3: [
+      "Haz una confesión sexual que nunca me hayas dicho",
+      "¿Te atreverías a hacerlo en un lugar público? ¿Cuál?",
+      "¿Qué fantasía tienes que aún te da pena contarme?",
+      "¿Te gustaría dominarme o que te domine?",
+      "Imagina que tenemos 1 hora y un hotel… ¿Qué pasa?",
+      "Si tuviéramos 24 horas para hacer todo lo que queremos, ¿qué harías primero?",
+      "¿Te gustaría que probáramos juegos de poder durante nuestra intimidad?",
+      "Si te pidiera que me dejes controlar todo en la cama, ¿te excitaría o te haría sentir inseguro/a?"
+    ],
+    relacion: [
+      "¿Cómo te sentiste cuando te dije 'te amo' por primera vez?",
+      "¿Cuál fue el primer momento en el que supe que estábamos hechos el uno para el otro?",
+      "¿Qué es lo que más te hace sentir querido/a por mí?",
+      "¿Cuál es tu recuerdo favorito de una cita que tuvimos?",
+      "¿Hay alguna cosa que todavía te gustaría probar juntos que nunca hemos hecho?",
+      "¿Qué harías si estuviéramos en una situación difícil, solo los dos, sin nadie más a quien recurrir?",
+      "¿Qué es lo que más te atrae de mí, más allá de lo físico?",
+      "¿Cómo imaginas que seremos dentro de 10 años juntos?",
+      "¿Qué es lo más importante que has aprendido de nuestra relación?"
+    ],
+    intimidad: [
+      "¿Qué parte de mi cuerpo te gustaría besar más?",
+      "¿Alguna vez has tenido un sueño erótico sobre mí? Cuéntamelo.",
+      "¿Cuál es el lugar más extraño o atrevido en el que te gustaría tener intimidad conmigo?",
+      "¿Qué tipo de toque te excita más cuando estamos juntos?",
+      "Si pudieras cambiar algo de nuestra vida sexual, ¿qué sería?",
+      "¿Te gustaría probar un 'roleplay'? Si es así, ¿qué personaje te gustaría interpretar?",
+      "¿Qué palabra o frase te excita más cuando la digo?",
+      "¿Qué prenda de ropa que uso te excita más?",
+      "Si estuviéramos atrapados en un lugar sin salir, ¿cuánto tiempo podríamos estar sin parar de tocarnos?"
+    ],
+    situaciones_intimas: [
+      "¿Te gustaría tener relaciones en algún lugar fuera de la cama? ¿Dónde te gustaría que fuera?",
+      "¿Qué harías si estuvieras completamente desnudo/a conmigo en un lugar público?",
+      "¿Alguna vez has fantaseado conmigo en un lugar extraño? Cuéntame cómo sería.",
+      "¿Te gustaría que probáramos a hacerlo en una posición que nunca hemos intentado? ¿Cuál?",
+      "¿Dónde te gustaría que te acariciara cuando no estamos en la cama?",
+      "Si estuviéramos completamente solos en una habitación, sin restricciones, ¿cómo comenzarías a tocarme?",
+      "Si te pidiera que no hables durante un momento, pero me tocaras en ciertas partes, ¿dónde empezarías?",
+      "¿Te gustaría que probáramos hacerlo en una postura más atrevida, por ejemplo, contra una pared o en el suelo?"
+    ],
+    fantasias_sexuales: [
+      "¿Tienes alguna fantasía de sumisión o dominación que te gustaría probar conmigo? ¿Qué tal si lo hacemos hoy?",
+      "Si pudieras elegir un lugar fuera de la habitación para tener relaciones, ¿dónde sería y por qué?",
+      "¿Te gustaría que hiciéramos un juego de rol? ¿Qué personajes te gustaría que interpretáramos?",
+      "¿Te gustaría probar algo más 'extremo' en la cama, como ataduras o algo por el estilo?",
+      "Si te propusiera grabar nuestro encuentro, ¿estarías de acuerdo? ¿Qué límites tendríamos?",
+      "¿Te excita más la idea de ser dominante o sumiso/a? ¿Por qué?",
+      "Si pudieras elegir entre una noche completamente sin reglas o una completamente planeada, ¿cuál elegirías?",
+      "Si estuviéramos en una fiesta privada, ¿te atreverías a hacer algo atrevido delante de otras personas?",
+      "¿Te gustaría que probáramos el sexo en algún lugar fuera de la cama, como en la ducha o en una silla?"
+    ],
+    sorpresa: [
+      "Si me pido un masaje, ¿te gustaría darme uno mientras me tocas en zonas que no esperan?",
+      "¿Cómo reaccionarías si de repente, estando en cualquier parte de la casa, te tomara en mis brazos y te besara apasionadamente?",
+      "Si un día me encontrara vestida de manera completamente diferente a lo que sueles ver, ¿cómo reaccionarías?",
+      "¿Te gustaría sorprenderme con algo excitante en medio de la noche, sin previo aviso?",
+      "Si estuvieras completamente desnudo/a y me acercara a ti de una manera diferente, ¿cómo me recibirías?",
+      "¿Te gustaría que probáramos a tener relaciones en un sitio no tan común (como en un coche o en una tienda)?",
+      "¿Cómo reaccionarías si te sorprendiera con un atuendo sexy que nunca esperaste?",
+      "Si de repente te dijera que quiero que hagamos algo 'prohibido', ¿cuál sería tu reacción?",
+      "¿Te gustaría que te sorprendiera con algo inesperado mientras te beso en el cuello o en los labios?",
+      "¿Qué harías si te dijera que tengo una sorpresa especialmente para ti esta noche?"
+    ]
+  };
+</script>
 
     function showQuestion() {
       const level = document.getElementById("level").value;
